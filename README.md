@@ -1,2 +1,2 @@
 # ROR-study-notes
-for just memo
+just memo
