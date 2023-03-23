@@ -1,24 +1,44 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Ruby version
+`3.0.3`
 
-Things you may want to cover:
+- Rails version
+`7.0.4.3`
 
-* Ruby version
+- Database
+`sqlite`
 
-* System dependencies
+## procedures
 
-* Configuration
+1. Create project
+```
+rails new basic_CRUD
+```
 
-* Database creation
+2. Start the server: To start the Rails server, navigate into the basic_CRUD directory and run the following command in your terminal
+```
+rails server
+```
 
-* Database initialization
+then, before next step, quit from server with Ctrl + C
 
-* How to run the test suite
+3. Create CRUD: To create a CRUD (Create, Read, Update, Delete)
+Rails provides a built-in generator for creating a scaffold, which is a quick way to generate a full set of CRUD actions for a resource.
+To generate a scaffold for a resource called Post, run the following command in your terminal:
+```
+rails generate scaffold Post title:string body:text
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+4. Run the migration to create the posts table in the database
+```
+rails db:migrate
+```
 
-* Deployment instructions
+5. Start the server again
+```
+rails server
+```
 
-* ...
+6. Navigate to the index page: Open your web browser and navigate to 
+http://localhost:3000/posts
